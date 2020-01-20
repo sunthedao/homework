@@ -14,7 +14,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-    
+
     <!-- css -->
     <link rel="stylesheet" href="style.css">
 
@@ -29,7 +29,7 @@
 
     <!-- Search form -->
     <div class="container">
-        <!-- div align left-right เค้าจะไม่นิยมใช้งานในนี้ เค้าจะจัด style ใน CSS -->
+        <!--  //! div align left-right เค้าจะไม่นิยมใช้งานในนี้ เค้าจะจัด style ใน CSS -->
         <div align="left" id="first" class="row">
             <div class="col">
                 <form id="search" class="form-inline md-form form-sm active-cyan-2 mt-2">
@@ -38,12 +38,12 @@
                 </form>
             </div>
             <!-- icon -->
-            
-            <!-- div align left-right เค้าจะไม่นิยมใช้งานในนี้ เค้าจะจัด style ใน CSS -->
-            <!-- พวก icon ให้จำไว้ว่าถ้าเป็นปุ่มน่ะ เราจะต้องใช้ tag button หรือ a ครอบด้วย  ถ้าเป็น icon ที่ใช้แสดงเฉยๆ ไม่ได้กดอะไร ก็ไม่ต้องครอบ -->
-            <!-- แล้วก็การจัดปุ่ม ซ้าย ขวา กลาง มันจะมี class ชื่อว่า float-ตามด้วยตำแหน่งที่เราต้องการ ถ้าชิดขวาก็ float-right -->
+
+            <!-- //! div align left-right เค้าจะไม่นิยมใช้งานในนี้ เค้าจะจัด style ใน CSS -->
+            <!-- //! พวก icon ให้จำไว้ว่าถ้าเป็นปุ่มน่ะ เราจะต้องใช้ tag button หรือ a ครอบด้วย  ถ้าเป็น icon ที่ใช้แสดงเฉยๆ ไม่ได้กดอะไร ก็ไม่ต้องครอบ -->
+            <!-- //! แล้วก็การจัดปุ่ม ซ้าย ขวา กลาง มันจะมี class ชื่อว่า float-ตามด้วยตำแหน่งที่เราต้องการ ถ้าชิดขวาก็ float-right -->
             <div align="right" class="col">
-                <button type="button" class="btn btn-light color-green">  <i class="fas fa-2x fa-plus" id="icon" data-toggle="modal" data-target="#myModal"></i>  </button>
+                <button type="button" class="btn btn-light color-green"> <i class="fas fa-2x fa-plus" id="icon" data-toggle="modal" data-target="#myModal"></i> </button>
             </div>
         </div>
     </div>
@@ -56,16 +56,31 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title" id="myModalLabel">Create Users</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <form action="save.php" method="POST" name="save">
                     <div class="modal-body">
-                        <input type="text" name="Firstname" id="inp" placeholder="Firstname"><br>
-                        <input type="text" name="Lastname" id="inp" placeholder="Lastname"><br>
-                        <input type="text" name="Email" id="inp" placeholder="Email"><br>
-                        <input type="text" name="MobileNo" id="inp" placeholder="MobileNo"><br>
-                        <input type="text" name="Address" id="inp" placeholder="Address"><br>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Firstname</label>
+                            <input type="text" class="form-control" id="inp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Lastname</label>
+                            <input type="text" class="form-control" id="inp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="email" class="form-control" id="inp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Mobile No.</label>
+                            <input type="number" class="form-control" id="inp">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Address</label>
+                            <textarea class="form-control" id="inp" rows="3"></textarea>
+                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -95,8 +110,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="button" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td> 
+                <td><button type="button" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>2</td>
@@ -105,8 +120,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>  
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>3</td>
@@ -115,8 +130,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>  
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>4</td>
@@ -125,8 +140,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>   
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>5</td>
@@ -135,8 +150,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>  
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>6</td>
@@ -145,8 +160,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td> 
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>7</td>
@@ -155,8 +170,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>  
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>8</td>
@@ -165,8 +180,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>  
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>9</td>
@@ -175,8 +190,8 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>  
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
             <tr>
                 <td>10</td>
@@ -185,13 +200,15 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button> 
-                <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td> 
+                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
+                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
             </tr>
 
         </table>
     </div>
     <br>
+
+    <!-- pagiantion -->
     <div class="container">
         <nav aria-label="Page navigation example">
             <ul class="pagination">
