@@ -1,9 +1,6 @@
-#icon{
-    margin-right: 10px;
-    margin-top: 30px;
+.btn.btn-light.color-green{
     background-color: green;
 }
-
 
 #first{
     margin-top: 100px;
@@ -48,4 +45,19 @@ tr{
 
 #trash:hover{
     background-color: red;
+}
+
+.btn.btn-light.color-blue{
+    background-color: blue;
+    width: 45px;
+    height: 45px;
+    border-radius: 4em;
+
+}
+
+.btn.btn-light.color-red{
+    background-color: red;
+    width: 45px;
+    height: 45px;
+    border-radius: 4em;
 }
