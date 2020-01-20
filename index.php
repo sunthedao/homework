@@ -63,23 +63,23 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Firstname</label>
-                            <input type="text" class="form-control" id="inp">
+                            <input type="text" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Lastname</label>
-                            <input type="text" class="form-control" id="inp">
+                            <input type="text" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email</label>
-                            <input type="email" class="form-control" id="inp">
+                            <input type="email" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Mobile No.</label>
-                            <input type="number" class="form-control" id="inp">
+                            <input type="number" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Address</label>
-                            <textarea class="form-control" id="inp" rows="3"></textarea>
+                            <textarea class="form-control"  rows="3"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
