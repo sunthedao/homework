@@ -14,7 +14,6 @@ function DB(){
     
     return $conn;
 
-mysqli_close($conn);
 }
 
 ?>

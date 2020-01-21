@@ -43,53 +43,14 @@
             <!-- //! พวก icon ให้จำไว้ว่าถ้าเป็นปุ่มน่ะ เราจะต้องใช้ tag button หรือ a ครอบด้วย  ถ้าเป็น icon ที่ใช้แสดงเฉยๆ ไม่ได้กดอะไร ก็ไม่ต้องครอบ -->
             <!-- //! แล้วก็การจัดปุ่ม ซ้าย ขวา กลาง มันจะมี class ชื่อว่า float-ตามด้วยตำแหน่งที่เราต้องการ ถ้าชิดขวาก็ float-right -->
             <div align="right" class="col">
-                <button type="button" class="btn btn-light color-green"> <i class="fas fa-2x fa-plus" id="icon" data-toggle="modal" data-target="#myModal"></i> </button>
+                <button type="button" class="btn btn-sm btn-light color-green" value="1"> 
+                    <i class="fas fa-2x fa-plus" id="icon" data-toggle="modal" data-target="#myModal"></i> 
+                </button>
             </div>
         </div>
     </div>
     <br>
 
-
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Create Users</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                </div>
-                <form action="save.php" method="POST" name="save">
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Firstname</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Lastname</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Email</label>
-                            <input type="email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Mobile No.</label>
-                            <input type="number" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Address</label>
-                            <textarea class="form-control"  rows="3"></textarea>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary" name="insertdata" value="submit">Save</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 
     <!-- Show Table -->
     <div class="container">
@@ -110,8 +71,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="button" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>2</td>
@@ -120,8 +87,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>3</td>
@@ -130,8 +103,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>4</td>
@@ -140,8 +119,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>5</td>
@@ -150,8 +135,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>6</td>
@@ -160,8 +151,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>7</td>
@@ -170,8 +167,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>8</td>
@@ -180,8 +183,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>9</td>
@@ -190,8 +199,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
             <tr>
                 <td>10</td>
@@ -200,8 +215,14 @@
                 <td>example@gmail.com</td>
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
-                <td><button type="btton" class="btn btn-light color-blue"> <i class="fas fa-edit" id="edit"></i></button>
-                    <button type="button" class="btn btn-light color-red" id="btnlight"><i class="fas fa-trash-alt" id="trash"></i></button></td>
+                <td>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit" id="edit"></i>
+                    </button>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt" id="trash"></i>
+                    </button>
+                </td>
             </tr>
 
         </table>
@@ -246,15 +267,71 @@
                 echo "0 result check your coding";
             }
 
-            mysqli_close($connection);
+            
             ?> -->
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Create Users</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <form action="save.php" method="POST" name="save">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Firstname</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Lastname</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Mobile No.</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Address</label>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" name="insertdata" value="submit">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
+
 </html>
+<script>
+$(document).ready(function(){
+
+$("#edit").click(function(){
+    $('#edit').val($(this).data('id'));
+    $('#myModal').modal('show');
+});
+});
+
+</script>
+
+<?php $connection->close() ?>
