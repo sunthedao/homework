@@ -346,13 +346,13 @@
                 url: '/hm/api/newapi.php',
                 method: "post",
                 success: (res) => {
-                    // console.log(res);                   
-                    $("input[name='ID']").val(res.id);
-                    $("input[name='Firstname']").val(res.Firstname);
-                    $("input[name='Lastname']").val(res.Lastname);
-                    $("input[name='Email']").val(res.Email);
-                    $("input[name='MobileNo']").val(res.MobileNo);
-                    $("textarea[name='Address']").val(res.Address);
+                    console.log(res);                   
+                    // $("input[name='ID']").val(res.id);
+                    // $("input[name='Firstname']").val(res.Firstname);
+                    // $("input[name='Lastname']").val(res.Lastname);
+                    // $("input[name='Email']").val(res.Email);
+                    // $("input[name='MobileNo']").val(res.MobileNo);
+                    // $("textarea[name='Address']").val(res.Address);
                 }
             });
         });

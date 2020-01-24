@@ -1,33 +1,42 @@
 
-<?php require_once __DIR__ .'/../connect.php' ?> 
-<?php 
-header("Content-Type","application/json") ?>
+<?php require_once __DIR__ . '/../connect.php' ?> 
+<?php
+header("Content-Type", "application/json") ?>
 
  <?php $connection = DB() ?>
 <?php
 
 $sql = "SELECT * from users WHERE id = 1 ";
 $rows = array();
-$result = mysqli_query($connection,$sql);
+$result = mysqli_query($connection, $sql);
 
-// check row
-if (mysqli_num_rows($result)>0){
 
-    // loop for data
-    while($row = mysqli_fetch_assoc($result)){
+$row = $result -> fetch_assoc();
+// printf ("%s %s %s %s %s %s\n", $row["id"], $row["Firstname"],$row["Lastname"],
+//         $row["Email"],$row["MobileNo"],$row["Address"]);
+
+
         $rows[] = $row;
-    }
-}else 
-{
- echo "result = 0 , go check ur COde";
- } 
-
- echo json_encode($rows);
 
 
- 
- 
- mysqli_close($connection);
+// // check row
+// if (mysqli_num_rows($result) > 0) {
+
+//     $row = 
+//     // loop for data
+//     // while ($row = mysqli_fetch_assoc($result)) {
+//     //     $rows[] = $row;
+//     // }
+// } else {
+//     echo "result = 0 , go check ur COde";
+// }
+
+echo json_encode($row);
+
+
+
+
+mysqli_close($connection);
 ?>
 
 
