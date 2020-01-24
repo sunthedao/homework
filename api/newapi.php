@@ -1,7 +1,7 @@
 
 <?php require_once __DIR__ . '/../connect.php' ?> 
 <?php
-header("Content-Type", "application/json") ?>
+header("Content-Type:application/json") ?>
 
  <?php $connection = DB() ?>
 <?php
