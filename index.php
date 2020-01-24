@@ -43,8 +43,8 @@
             <!-- //! พวก icon ให้จำไว้ว่าถ้าเป็นปุ่มน่ะ เราจะต้องใช้ tag button หรือ a ครอบด้วย  ถ้าเป็น icon ที่ใช้แสดงเฉยๆ ไม่ได้กดอะไร ก็ไม่ต้องครอบ -->
             <!-- //! แล้วก็การจัดปุ่ม ซ้าย ขวา กลาง มันจะมี class ชื่อว่า float-ตามด้วยตำแหน่งที่เราต้องการ ถ้าชิดขวาก็ float-right -->
             <div align="right" class="col">
-                <button type="button" class="btn btn-sm btn-light color-green" value="1"> 
-                    <i class="fas fa-2x fa-plus" id="icon" data-toggle="modal" data-target="#myModal"></i> 
+                <button type="button" class="btn btn-sm btn-light color-green" value="1">
+                    <i class="fas fa-2x fa-plus" id="icon" data-toggle="modal" data-target="#myModal"></i>
                 </button>
             </div>
         </div>
@@ -121,10 +121,10 @@
                 <td>สมุทรปราการ</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
+                        <i class="fas fa-edit"></i>
                     </button>
                     <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
+                        <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
             </tr>
@@ -137,10 +137,10 @@
                 <td>สมุทรปราการ</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
+                        <i class="fas fa-edit"></i>
                     </button>
                     <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
+                        <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
             </tr>
@@ -153,10 +153,10 @@
                 <td>สมุทรปราการ</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
+                        <i class="fas fa-edit"></i>
                     </button>
                     <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
+                        <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
             </tr>
@@ -168,11 +168,11 @@
                 <td>08888</td>
                 <td>สมุทรปราการ</td>
                 <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
+                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
+                        <i class="fas fa-edit"></i>
                     </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
+                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
+                        <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
             </tr>
@@ -185,10 +185,10 @@
                 <td>สมุทรปราการ</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
+                        <i class="fas fa-edit"></i>
                     </button>
                     <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
+                        <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
             </tr>
@@ -201,10 +201,10 @@
                 <td>สมุทรปราการ</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
+                        <i class="fas fa-edit"></i>
                     </button>
                     <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
+                        <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
             </tr>
@@ -217,10 +217,10 @@
                 <td>สมุทรปราการ</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
+                        <i class="fas fa-edit"></i>
                     </button>
                     <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
+                        <i class="fas fa-trash-alt"></i>
                     </button>
                 </td>
             </tr>
@@ -259,15 +259,21 @@
 
                 // ถ้า row มีมากกว่า 0 ทำในนี้
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr><td>" . $row["id"] . "</td><td>" . $row["Firstname"] . "</td><td>" . $row["Lastname"] . "</td><td>" . $row["Email"] . "</td><td>"
-                        . $row["MobileNo"] . "</td><td>" . $row["Address"] . "</td></tr><br>";
+                    echo "<tr>
+                    <td>" . $row["id"] . "</td>
+                    <td>" . $row["Firstname"] . "</td>
+                    <td>" . $row["Lastname"] . "</td>
+                    <td>" . $row["Email"] . "</td>
+                    <td>" . $row["MobileNo"] . "</td>
+                    <td>" . $row["Address"] . "</td>
+                    </tr><br>";
                 }
                 echo "</table>";
             } else {
                 echo "0 result check your coding";
             }
 
-            
+
             ?> -->
 
 
@@ -281,27 +287,32 @@
                     <h4 class="modal-title" id="myModalLabel">Create Users</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 </div>
-                <form action="save.php" method="POST" name="save">
+                <form action="save.php" method="POST" name="save" class="MyForm">
                     <div class="modal-body">
                         <div class="form-group">
+                            <label for="exampleFormControlInput1">ID</label>
+                            <input type="text" class="form-control" name="ID">
+                            <!-- id="<?php echo $row["id"]; ?> -->
+                        </div>
+                        <div class="form-group">
                             <label for="exampleFormControlInput1">Firstname</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="Firstname">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Lastname</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="Lastname">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email</label>
-                            <input type="email" class="form-control">
+                            <input type="email" class="form-control" name="Email">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Mobile No.</label>
-                            <input type="number" class="form-control">
+                            <input type="number" class="form-control" name="MobileNo">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Address</label>
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="3" name="Address"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -324,14 +335,28 @@
 
 </html>
 <script>
-$(document).ready(function(){
+    $(document).ready(function() {
+        $(".color-blue").click(function() {
+            $('.color-blue').val($(this).data('id'));
+            $('#myModal').modal('show');
+            $('.MyForm').trigger("reset");
 
-$("#edit").click(function(){
-    $('#edit').val($(this).data('id'));
-    $('#myModal').modal('show');
-});
-});
 
+            $.ajax({
+                url: '/hm/api/newapi.php',
+                method: "post",
+                success: (res) => {
+                    // console.log(res);                   
+                    $("input[name='ID']").val(res.id);
+                    $("input[name='Firstname']").val(res.Firstname);
+                    $("input[name='Lastname']").val(res.Lastname);
+                    $("input[name='Email']").val(res.Email);
+                    $("input[name='MobileNo']").val(res.MobileNo);
+                    $("textarea[name='Address']").val(res.Address);
+                }
+            });
+        });
+    });
 </script>
 
 <?php $connection->close() ?>

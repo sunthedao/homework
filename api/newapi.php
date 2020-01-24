@@ -6,7 +6,7 @@ header("Content-Type","application/json") ?>
  <?php $connection = DB() ?>
 <?php
 
-$sql = "SELECT * from users";
+$sql = "SELECT * from users WHERE id = 1 ";
 $rows = array();
 $result = mysqli_query($connection,$sql);
 
