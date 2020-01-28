@@ -1,6 +1,7 @@
-<!--php -->
-<?php require_once './connect.php' ?>
-<?php $connection = DB() ?>
+<?php
+require_once './connect.php';
+$connection = DB()
+?>
 
 
 
@@ -55,175 +56,20 @@
     <!-- Show Table -->
     <div class="container">
         <table class="table table-striped" style="width: 100%">
-            <tr>
-                <th>ID</th>
-                <th>Firstname</th>
-                <th>Lastname</th>
-                <th>Email</th>
-                <th>Mobile No.</th>
-                <th>Address</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit" id="edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt" id="trash"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>8</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>ทดสอบ</td>
-                <td>ทดลอง</td>
-                <td>example@gmail.com</td>
-                <td>08888</td>
-                <td>สมุทรปราการ</td>
-                <td>
-                    <button type="button" class="btn btn-sm btn-light color-blue" value="1">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button type="button" class="btn btn-sm btn-light color-red" id="btnlight" value="1">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Mobile No.</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- for data -->
+            </tbody>
 
         </table>
     </div>
@@ -340,23 +186,49 @@
             $('.color-blue').val($(this).data('id'));
             $('#myModal').modal('show');
             $('.MyForm').trigger("reset");
-
-
-            $.ajax({
-                url: '/hm/api/newapi.php',
-                method: "post",
-                success: (res) => {
-                    // console.log(res);                   
-                    $("input[name='ID']").val(res.id);
-                    $("input[name='Firstname']").val(res.Firstname);
-                    $("input[name='Lastname']").val(res.Lastname);
-                    $("input[name='Email']").val(res.Email);
-                    $("input[name='MobileNo']").val(res.MobileNo);
-                    $("textarea[name='Address']").val(res.Address);
-                }
-            });
         });
+    });
+
+    $.ajax({
+        url: '/api/allapi.php',
+        method: "post",
+        success: (res) => {
+
+
+            // console.log(res);
+
+            $('table tbody').empty();
+
+            // res.data เรียกหา Key ที่อยู่ใน Res
+            res.data.forEach((e, i) => {
+                const tr = $('<tr></tr>')
+
+                const td1 = $('<td></td>')
+                td1.text(e.id)
+                const td2 = $('<td></td>')
+                td2.text(e.Firstname)
+                const td3 = $('<td></td>')
+                td3.text(e.Lastname)
+                const td4 = $('<td></td>')
+                td4.text(e.Email)
+                const td5 = $('<td></td>')
+                td5.text(e.MobileNo)
+                const td6 = $('<td></td>')
+                td6.text(e.Address)
+
+                tr.append(td1)
+                tr.append(td2)
+                tr.append(td3)
+                tr.append(td4)
+                tr.append(td5)
+                tr.append(td6) 
+                // tr.append(td7)
+                
+                $('table tbody').append(tr)
+            });
+           
+        }
     });
 </script>
 
-<?php $connection->close() ?>
+<?php $connection->close(); ?>

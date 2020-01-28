@@ -1,22 +1,22 @@
 
-<?php require_once __DIR__ . '/../connect.php' ?> 
-<?php
-header("Content-Type:application/json") ?>
+<?php require_once __DIR__ . '/../connect.php';
 
- <?php $connection = DB() ?>
-<?php
+header("Content-Type:application/json");
+
+$connection = DB();
+
 
 $sql = "SELECT * from users WHERE id = 1 ";
 $rows = array();
 $result = mysqli_query($connection, $sql);
 
 
-$row = $result -> fetch_assoc();
+$row = $result->fetch_assoc();
 // printf ("%s %s %s %s %s %s\n", $row["id"], $row["Firstname"],$row["Lastname"],
 //         $row["Email"],$row["MobileNo"],$row["Address"]);
 
 
-        $rows[] = $row;
+$rows[] = $row;
 
 
 // // check row
@@ -37,9 +37,3 @@ echo json_encode($row);
 
 
 mysqli_close($connection);
-?>
-
-
-
-
-
