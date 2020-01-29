@@ -33,11 +33,12 @@ $connection = DB()
         <!--  //! div align left-right เค้าจะไม่นิยมใช้งานในนี้ เค้าจะจัด style ใน CSS -->
         <div align="left" id="first" class="row">
             <div class="col">
-                <form id="search" class="form-inline md-form form-sm active-cyan-2 mt-2">
-                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                <form id="frmsearch" class="form-inline md-form form-sm active-cyan-2 mt-2">
+                    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search" name="Search_text" id="Search_text">
                     <i class="fas fa-search" aria-hidden="true"></i>
                 </form>
             </div>
+            <div id="result"></div>
             <!-- icon -->
 
             <!-- //! div align left-right เค้าจะไม่นิยมใช้งานในนี้ เค้าจะจัด style ใน CSS -->
@@ -95,34 +96,6 @@ $connection = DB()
             </ul>
         </nav>
     </div>
-
-    <!-- <?php
-            $sql = "SELECT * from users";
-            $result = mysqli_query($connection, $sql);
-
-            // check rows
-            if (mysqli_num_rows($result) > 0) {
-
-                // ถ้า row มีมากกว่า 0 ทำในนี้
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<tr>
-                    <td>" . $row["id"] . "</td>
-                    <td>" . $row["Firstname"] . "</td>
-                    <td>" . $row["Lastname"] . "</td>
-                    <td>" . $row["Email"] . "</td>
-                    <td>" . $row["MobileNo"] . "</td>
-                    <td>" . $row["Address"] . "</td>
-                    </tr><br>";
-                }
-                echo "</table>";
-            } else {
-                echo "0 result check your coding";
-            }
-
-
-            ?> -->
-
-
 
 
     <!-- Modal -->
@@ -189,9 +162,33 @@ $connection = DB()
         });
     });
 
+    // search
+    // syntax jquery
+    $(document).ready(function() {
+        // event keyup (request what u type)
+        $('#Search_text').keyup(function() {
+            // create variable for receive what u type (var = variable) var txt $(this). <<<val()
+            var txt = $(this).val();
+            // make id-result to empty 
+            $('#result').html('');
+            $.ajax({
+                url:'/api/allapi.php',
+                method: "GET",
+                // What u sent it's gonna identify by data {sent search: in txt val}
+                data:{search:txt},
+                // success it's response after sent data.after we got data we make  it work in '=> {
+//                    $result.html(data) <<< see this! we make it work in id result html(data)
+                // }
+                success:(data) =>{
+                    $('$result').html(data);
+                }
+            })
+        });
+    });
+
     $.ajax({
         url: '/api/allapi.php',
-        method: "post",
+        method: "POST",
         success: (res) => {
 
 
@@ -215,18 +212,20 @@ $connection = DB()
                 td5.text(e.MobileNo)
                 const td6 = $('<td></td>')
                 td6.text(e.Address)
+                const btn = $('<botton type="button">Edit</botton>')
+
 
                 tr.append(td1)
                 tr.append(td2)
                 tr.append(td3)
                 tr.append(td4)
                 tr.append(td5)
-                tr.append(td6) 
-                // tr.append(td7)
-                
+                tr.append(td6)
+                tr.append(btn)
+
                 $('table tbody').append(tr)
             });
-           
+
         }
     });
 </script>
