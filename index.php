@@ -164,69 +164,79 @@ $connection = DB()
 
     // search
     // syntax jquery
+    //     $(document).ready(function() {
+    //         // event keyup (request what u type)
+    //         $('#Search_text').keyup(function() {
+    //             // create variable for receive what u type (var = variable) var txt $(this). <<<val()
+    //             var txt = $(this).val();
+    //             // make id-result to empty 
+    //             $('#result').html('');
+    //             $.ajax({
+    //                 url:'/api/allapi.php',
+    //                 method: "GET",
+    //                 // What u sent it's gonna identify by data {sent search: in txt val}
+    //                 data:{search:txt},
+    //                 // success it's response after sent data.after we got data we make  it work in '=> {
+    // //                    $result.html(data) <<< see this! we make it work in id result html(data)
+    //                 // }
+    //                 success:(data) =>{
+    //                     $('$result').html(data);
+    //                 }
+    //             })
+    //         });
+    //     });
+
     $(document).ready(function() {
-        // event keyup (request what u type)
-        $('#Search_text').keyup(function() {
-            // create variable for receive what u type (var = variable) var txt $(this). <<<val()
-            var txt = $(this).val();
-            // make id-result to empty 
-            $('#result').html('');
+        $('#Search_text').keyup(function(e) {
+            var txt = e.target.value
+            // console.log(txt);
+    
             $.ajax({
-                url:'/api/allapi.php',
+                url: '/api/allapi.php',
                 method: "GET",
-                // What u sent it's gonna identify by data {sent search: in txt val}
-                data:{search:txt},
-                // success it's response after sent data.after we got data we make  it work in '=> {
-//                    $result.html(data) <<< see this! we make it work in id result html(data)
-                // }
-                success:(data) =>{
-                    $('$result').html(data);
+                data: {
+                    search: txt
+                },
+                success: (res) => {
+
+
+                    // console.log(txt);
+
+                    $('table tbody').empty();
+
+                    // res.data เรียกหา Key ที่อยู่ใน Res
+                    res.data.forEach((e, i) => {
+                        const tr = $('<tr></tr>')
+
+                        const td1 = $('<td></td>')
+                        td1.text(e.id)
+                        const td2 = $('<td></td>')
+                        td2.text(e.Firstname)
+                        const td3 = $('<td></td>')
+                        td3.text(e.Lastname)
+                        const td4 = $('<td></td>')
+                        td4.text(e.Email)
+                        const td5 = $('<td></td>')
+                        td5.text(e.MobileNo)
+                        const td6 = $('<td></td>')
+                        td6.text(e.Address)
+                        const btn = $('<botton type="button">Edit</botton>')
+
+
+                        tr.append(td1)
+                        tr.append(td2)
+                        tr.append(td3)
+                        tr.append(td4)
+                        tr.append(td5)
+                        tr.append(td6)
+                        tr.append(btn)
+
+                        $('table tbody').append(tr)
+                    });
+
                 }
-            })
-        });
-    });
-
-    $.ajax({
-        url: '/api/allapi.php',
-        method: "POST",
-        success: (res) => {
-
-
-            // console.log(res);
-
-            $('table tbody').empty();
-
-            // res.data เรียกหา Key ที่อยู่ใน Res
-            res.data.forEach((e, i) => {
-                const tr = $('<tr></tr>')
-
-                const td1 = $('<td></td>')
-                td1.text(e.id)
-                const td2 = $('<td></td>')
-                td2.text(e.Firstname)
-                const td3 = $('<td></td>')
-                td3.text(e.Lastname)
-                const td4 = $('<td></td>')
-                td4.text(e.Email)
-                const td5 = $('<td></td>')
-                td5.text(e.MobileNo)
-                const td6 = $('<td></td>')
-                td6.text(e.Address)
-                const btn = $('<botton type="button">Edit</botton>')
-
-
-                tr.append(td1)
-                tr.append(td2)
-                tr.append(td3)
-                tr.append(td4)
-                tr.append(td5)
-                tr.append(td6)
-                tr.append(btn)
-
-                $('table tbody').append(tr)
             });
-
-        }
+        });
     });
 </script>
 
